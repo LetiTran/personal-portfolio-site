@@ -1,0 +1,98 @@
+/* --------------------------------------------- */
+/* Whole thing */
+
+body {
+  display: grid;
+  grid-template-rows: 100px repeat(6, auto);
+  grid-row-gap: 20px;
+  /* grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); */
+  grid-template-areas:
+  "navigation"
+  "intro"
+  "about"
+  "work-done"
+  "social-media"
+  "contact"
+  "footer"
+  /* margin: 10px; */
+  /* padding: 5px; */
+  /* font-family: 'Gloria Hallelujah', cursive; */
+  /* background-color: #B0C4DE */
+  /* background: #F5BDB3 -webkit-gradient(linear, left top, left bottom, from(#F5E9B3), to(#F5BDB3)) no-repeat; */
+}
+
+.gradient {
+    background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat;
+}
+
+
+/* --------------------------------------------- */
+/* NAV */
+
+.nav-bar ul {
+  list-style-type: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  color: #FFFFFF;
+}
+
+.nav-bar {
+  grid-area: navigation;
+  background-color: #F5DEB3;
+  background: #F5BDB3 -webkit-gradient(linear, left top, left bottom, from(#F5E9B3), to(#F5BDB3)) no-repeat;
+  /* #F5B3CA -webkit-gradient(linear, left top, left bottom, from(#F5C8B3), to(#F5B3CA)) no-repeat */
+  padding: 8px;
+  position:fixed;
+  width: 100%;
+}
+
+.nav-bar ul li {
+  padding-right: 40px;
+}
+
+
+/* --------------------------------------------- */
+/* INTRO */
+.intro {
+  grid-area: intro;
+}
+
+.splash {
+  width: 40vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.splash span {
+  display: block;
+  font-style: italic;
+padding-top: 30px;
+}
+
+.splash img {
+  /* grid-row: 1 / span 2; */
+  float: left;
+  border: #E5E1FF 10px double ;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+/* --------------------------------------------- */
+/* ABOUT */
+
+
+/* --------------------------------------------- */
+/* WORK-DONE */
+
+
+/* --------------------------------------------- */
+/* SOCIAL-MEDIA */
+
+
+/* --------------------------------------------- */
+/* CONTACT */
+
+
+/* --------------------------------------------- */
+/* FOOTER */
