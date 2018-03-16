@@ -3,8 +3,8 @@
 
 body {
   display: grid;
-  grid-template-rows: 100px repeat(6, auto);
-  grid-row-gap: 20px;
+  grid-template-rows: 65px repeat(6, auto);
+  /* grid-row-gap: 20px; */
   /* grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); */
   grid-template-areas:
   "navigation"
@@ -21,8 +21,19 @@ body {
   /* background: #F5BDB3 -webkit-gradient(linear, left top, left bottom, from(#F5E9B3), to(#F5BDB3)) no-repeat; */
 }
 
-.gradient {
-    background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat;
+.gradient-top {
+  background: #b3fff2 -webkit-gradient(linear, left top, left bottom, from(#D9A69F), to(#E5E1FF)) no-repeat;
+   /* background: #F5BDB3 -webkit-gradient(linear, left top, left bottom, from(#F5E9B3), to(#F5BDB3)) no-repeat; */
+}
+
+/* that green and pink one i liked */
+/* #b3fff2 */
+/* f49ac1 */
+  /* background: #b3fff2 -webkit-gradient(linear, left top, left bottom, from(#f49ac1), to(#b3fff2)) no-repeat; */
+
+.gradient-bottom {
+  background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat;
+   /* background: #F5BDB3 -webkit-gradient(linear, left top, left bottom, from(#F5E9B3), to(#F5BDB3)) no-repeat; */
 }
 
 
@@ -39,9 +50,10 @@ body {
 
 .nav-bar {
   grid-area: navigation;
-  background-color: #F5DEB3;
-  background: #F5BDB3 -webkit-gradient(linear, left top, left bottom, from(#F5E9B3), to(#F5BDB3)) no-repeat;
-  /* #F5B3CA -webkit-gradient(linear, left top, left bottom, from(#F5C8B3), to(#F5B3CA)) no-repeat */
+  background-color: #D9A69F;
+  /* background: #F5BDB3 -webkit-gradient(linear, left top, left bottom, from(#F5E9B3), to(#F5BDB3)) no-repeat; */
+  /* background:#F5B3CA -webkit-gradient(linear, left top, left bottom, from(#F5C8B3), to(#F5B3CA)) no-repeat; */
+  /* background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat; */
   padding: 8px;
   position:fixed;
   width: 100%;
@@ -51,12 +63,20 @@ body {
   padding-right: 40px;
 }
 
+.nav-bar ul li:hover {
+  color:  #E1FFE5;
+;
+}
 
 /* --------------------------------------------- */
 /* INTRO */
 .intro {
   grid-area: intro;
 }
+
+/* .intro:hover{
+background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat;
+} */
 
 .splash {
   width: 40vw;
@@ -67,7 +87,7 @@ body {
 .splash span {
   display: block;
   font-style: italic;
-padding-top: 30px;
+  padding-top: 30px;
 }
 
 .splash img {
@@ -80,19 +100,54 @@ padding-top: 30px;
 
 /* --------------------------------------------- */
 /* ABOUT */
-
+.about {
+  grid-area: about;
+}
+.about:hover{
+  background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat;
+}
 
 /* --------------------------------------------- */
 /* WORK-DONE */
+.work-done {
+  grid-area: work-done;
 
+  display: grid;
+/* grid-template-columns: repeat(3, 1fr); */
+grid-template-columns:repeat(auto-fit, minmax(400px, 1fr));
+grid-template-rows: 20% 80%
+}
+
+.work-done:hover{
+  background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat;
+}
+
+.work-done .github {
+  grid-column: 1 / -1;
+}
 
 /* --------------------------------------------- */
 /* SOCIAL-MEDIA */
-
-
+.social-media {
+  grid-area: social-media;
+}
+.social-media:hover{
+  background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat;
+}
 /* --------------------------------------------- */
 /* CONTACT */
-
+.contact {
+  grid-area: contact;
+}
+.contact:hover{
+  background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat;
+}
 
 /* --------------------------------------------- */
 /* FOOTER */
+.footer {
+  grid-area: footer;
+}
+.footer:hover{
+  background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat;
+}
