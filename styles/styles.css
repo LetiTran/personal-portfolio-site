@@ -1,11 +1,11 @@
 /* --------------------------------------------- */
 /* Whole thing */
+@import url('https://fonts.googleapis.com/css?family=Itim');
 
 body {
+  font-family: 'Itim', cursive;
   display: grid;
   grid-template-rows: 65px repeat(6, auto);
-  /* grid-row-gap: 20px; */
-  /* grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); */
   grid-template-areas:
   "navigation"
   "intro"
@@ -13,39 +13,34 @@ body {
   "work-done"
   "social-media"
   "contact"
-  "footer"
-  /* margin: 10px; */
-  /* padding: 5px; */
-  /* font-family: 'Gloria Hallelujah', cursive; */
-  /* background-color: #B0C4DE */
-  /* background: #F5BDB3 -webkit-gradient(linear, left top, left bottom, from(#F5E9B3), to(#F5BDB3)) no-repeat; */
+  "footer";
 }
 
-.gradient-top {
-  /* background: #b3fff2 -webkit-gradient(linear, left top, left bottom, from(#D9A69F), to(#E5E1FF)) no-repeat; */
-  /* background: #F5BDB3 -webkit-gradient(linear, left top, left bottom, from(#F5E9B3), to(#F5BDB3)) no-repeat; */
-    /* background: #b3fff2 -webkit-gradient(linear, left top, left bottom, from(#f49ac1), to(#FFFFFF)) no-repeat; */
-    background: #b3fff2 -webkit-gradient(linear, left top, left bottom, from(#FFF0F5), to(#FFFFFF)) no-repeat;
+.top-bottom {
+  background: #FA8072;
 }
 
-/* that green and pink one i liked */
-/* #b3fff2 */
-/* f49ac1 */
-/* background: #b3fff2 -webkit-gradient(linear, left top, left bottom, from(#f49ac1), to(#b3fff2)) no-repeat; */
-
-.gradient-bottom {
-  /* background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat; */
-  /* background: #F5BDB3 -webkit-gradient(linear, left top, left bottom, from(#F5E9B3), to(#F5BDB3)) no-repeat; */
-  background: #b3fff2 -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#FFDAB9)) no-repeat;
+h1, h2, h3 {
+  color: #64332d;
 }
 
+p, a, span {
+  color: #64332d;
+}
 
+.about, .work-done, .contact, .social-media{
+  padding-left: 20px;
+}
+
+#link-selected {
+  color: white;
+}
 /* --------------------------------------------- */
 /* NAV */
 
 .nav-bar ul {
   list-style-type: none;
-  font-weight: bold;
+  /* font-weight: bold; */
   display: flex;
   justify-content: space-between;
   color: #FFFFFF;
@@ -53,10 +48,6 @@ body {
 
 .nav-bar {
   grid-area: navigation;
-  /* background-color: #F5B3CA; */
-  /* background: #F5BDB3 -webkit-gradient(linear, left top, left bottom, from(#F5E9B3), to(#F5BDB3)) no-repeat; */
-  /* background:#F5B3CA -webkit-gradient(linear, left top, left bottom, from(#F5C8B3), to(#F5B3CA)) no-repeat; */
-  /* background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat; */
   padding: 8px;
   position:fixed;
   width: 100%;
@@ -67,15 +58,15 @@ body {
 }
 
 .nav-bar ul li:hover {
-  color:  #E1FFE5;
+  color:  white;
 }
 
 .nav-bar ul li a {
   text-decoration: none;
-  color: black;
+  color: #64332d;
 }
 .nav-bar ul li a:hover {
-  color: #FFE4B5;
+  color: white;
 }
 
 
@@ -83,60 +74,48 @@ body {
 /* INTRO */
 .intro {
   grid-area: intro;
-}
-
-/* .intro:hover{
-background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF), to(#D9A69F)) no-repeat;
-} */
-
-.splash {
-  width: 40vw;
-  margin: 0 auto;
   text-align: center;
 }
 
-.splash span {
-  display: block;
-  font-style: italic;
-  padding-top: 30px;
-}
-
-.splash img {
-  /* grid-row: 1 / span 2; */
-  float: left;
-  border:  #FFE4B5 10px double ;
-
-  border-radius: 50%;
-  margin-right: 50px;
-}
 
 /* --------------------------------------------- */
 /* ABOUT */
 .about {
   grid-area: about;
 }
-.about:hover{
-  background: #FFE4B5 -webkit-gradient(linear, left top, left bottom, from(#FFF0F5), to(#FFE4B5)) no-repeat;
-}
+/* .about:hover{
+background: #FA8072;
+} */
 
 /* --------------------------------------------- */
 /* WORK-DONE */
 .work-done {
   grid-area: work-done;
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns:repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-rows: 20% 80%
+  grid-template-rows: 20% 80%;
+  grid-gap: 20px;
 
   /* TODO: make it centralized, put repo link, image..?/icon, border?division-line, gap in between...  */
+
 }
 
-.work-done:hover{
-  background:  #FFE4B5 -webkit-gradient(linear, left top, left bottom, from(#FFF0F5), to(#FFE4B5)) no-repeat;
+.work-done div:hover{
+  background:  #FA8072 -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#FA8072)) no-repeat;
 }
 
-.work-done .github {
+.work-done div {
+  border-bottom:  5px dotted #FA8072;
+
+}
+
+.work-done div h3{
+  text-align: center;
+}
+
+.work-done .work-intro {
   grid-column: 1 / -1;
+  text-align: center;
 }
 
 /* --------------------------------------------- */
@@ -144,23 +123,22 @@ background: #D9A69F -webkit-gradient(linear, left top, left bottom, from(#E5E1FF
 .social-media {
   grid-area: social-media;
 }
-.social-media:hover{
-  background:  #FFE4B5 -webkit-gradient(linear, left top, left bottom, from(#FFF0F5), to(#FFE4B5)) no-repeat;
-}
+/* .social-media:hover{
+background: #FA8072;
+} */
 /* --------------------------------------------- */
 /* CONTACT */
 .contact {
   grid-area: contact;
 }
-.contact:hover{
-  background: #FFE4B5 -webkit-gradient(linear, left top, left bottom, from(#FFF0F5), to(#FFE4B5)) no-repeat;
-}
+/* .contact:hover{
+background: #FA8072;
+} */
 
 /* --------------------------------------------- */
 /* FOOTER */
 .footer {
   grid-area: footer;
-}
-.footer:hover{
-  background:  #FFE4B5 -webkit-gradient(linear, left top, left bottom, from(#FFF0F5), to(#FFE4B5)) no-repeat;
+  text-align: center;
+  background-color: #FA8072;
 }

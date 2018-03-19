@@ -1,1 +1,71 @@
+body {
+  display: grid;
+  grid-template-rows: 65px 150px repeat(7, auto);
+  /* grid-template-rows: 50% 25% 25%; */
+  grid-column-gap: 20px;
+  /* grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); */
+  grid-template-columns: 15% 85%;
+}
 
+.intro {
+  grid-column: 1/ 4;
+  grid-row: 1 / 2;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#works-link {
+  color: white;
+}
+
+.work-menu {
+  /* TODO: each one should be a 'link' that will make visible only the content tha it refers to  */
+  /* TODO: make it responsive to window sizing */
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  background-color: #FA8072;
+  margin-left: 20px;
+  max-width: 150px;
+}
+
+.work-menu ul {
+  list-style-type: none;
+  color: white;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 180px;
+  display: grid;
+  grid-gap: 90px;
+}
+
+.startly {
+  grid-column: 2 / 3;
+  grid-row: 3 ;
+}
+
+.hotel{
+  grid-column: 2 / 3;
+  grid-row: 4 ;
+}
+
+.grocery-store {
+  grid-column: 2 / 3;
+  grid-row: 5 ;
+}
+
+.scrabble {
+  grid-column: 2 / 3;
+  grid-row: 6 ;
+}
+
+.ride-share {
+  grid-column: 2 / 3;
+  grid-row: 7;
+}
+
+.footer {
+  grid-column: 1 / 4;
+  grid-row: 8;
+}
+
+/* visibility: hidden; */
