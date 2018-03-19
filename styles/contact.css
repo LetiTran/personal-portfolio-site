@@ -1,20 +1,36 @@
-.splash {
+.intro {
   width: 40vw;
   margin: 0 auto;
   text-align: center;
-}
-
-.splash span {
-  display: block;
-  font-style: italic;
   padding-top: 30px;
 }
 
-.splash img {
+.intro h2 {
+  padding-top: 30px;
+}
+.intro span {
+  display: block;
+  font-style: italic;
+}
+
+.intro img {
   /* grid-row: 1 / span 2; */
   float: left;
   border:  #FFE4B5 10px double ;
 
   border-radius: 50%;
   margin-right: 50px;
+}
+
+.contact {
+  text-align: center;
+  padding: 20px;
+}
+
+.contact a {
+  font-size: 2em;
+}
+
+.contact img {
+padding: 20px;
 }

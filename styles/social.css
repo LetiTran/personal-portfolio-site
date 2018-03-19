@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.intro img {
+  padding-top: 40px;
+  /* grid-row: 1 / span 2; */
+  /* float: left;*/
+  border:  #FA8072 10px double ;
+}

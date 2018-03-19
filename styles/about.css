@@ -1,18 +1,12 @@
-
-.splash {
-  width: 40vw;
-  margin: 10px;
-  /* text-align: center; */
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.splash span {
-  display: block;
-  font-style: italic;
-  padding-top: 30px;
-}
 
-.splash img {
+.intro img {
   /* grid-row: 1 / span 2; */
-  /* float: left;
-  border:  #FFE4B5 10px double ; */
+  /* float: left;*/
+  border:  #FA8072 10px double ;
 }

@@ -92,25 +92,32 @@ background: #FA8072;
 .work-done {
   grid-area: work-done;
   display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(600px, 1fr));
   grid-template-rows: 20% 80%;
   grid-gap: 20px;
 
   /* TODO: make it centralized, put repo link, image..?/icon, border?division-line, gap in between...  */
 
 }
-
+.work-done img {
+  /* grid-row: 1 / span 2; */
+  /* float: left;*/
+  border:  #FA8072 10px double ;
+}
 .work-done div:hover{
   background:  #FA8072 -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#FA8072)) no-repeat;
 }
 
 .work-done div {
   border-bottom:  5px dotted #FA8072;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .work-done div h3{
   text-align: center;
+  border-radius: 50%;
+
 }
 
 .work-done .work-intro {
@@ -122,6 +129,8 @@ background: #FA8072;
 /* SOCIAL-MEDIA */
 .social-media {
   grid-area: social-media;
+  text-align: center;
+  padding: 30px;
 }
 /* .social-media:hover{
 background: #FA8072;
@@ -130,6 +139,8 @@ background: #FA8072;
 /* CONTACT */
 .contact {
   grid-area: contact;
+  text-align: center;
+  padding-bottom: 30px;
 }
 /* .contact:hover{
 background: #FA8072;
